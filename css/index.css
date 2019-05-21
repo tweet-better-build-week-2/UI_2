@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -136,7 +143,7 @@ header {
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: #ADD8E6;
+  background-color: #4b4cde;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -149,6 +156,9 @@ header nav {
   flex-wrap: wrap;
   margin: 0.5rem;
   width: 100%;
+}
+header nav .left-nav-item a {
+  color: white;
 }
 @media (min-width: 550px) {
   header nav .left-nav-item {
@@ -167,16 +177,29 @@ header nav .right-nav-item .show-nav-item {
   justify-content: space-around;
 }
 header nav .right-nav-item .show-nav-item i {
+  color: white;
   padding: 0 25px;
   margin-left: 20px;
 }
-@media (min-width: 800px) {
+@media (min-width: 550px) {
   header nav .right-nav-item .show-nav-item {
     display: none;
   }
 }
 header nav .links {
   display: none;
+}
+@media (min-width: 550px) {
+  header nav .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  header nav .links a {
+    padding: 2rem 1rem;
+    color: white;
+    text-decoration: none;
+  }
 }
 @media (min-width: 800px) {
   header nav .links {
@@ -185,9 +208,7 @@ header nav .links {
     justify-content: space-around;
   }
   header nav .links a {
-    text-decoration: none;
-    padding: 2rem 5rem;
-    color: black;
+    padding: 2rem 3rem;
   }
 }
 header nav .show-link {
@@ -199,14 +220,14 @@ header nav .show-link {
 header nav .show-link a {
   padding: 0.1rem;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 @media (min-width: 550px) {
 }
 .top-section {
   position: relative;
   width: 100%;
-  background-image: url('/assests/card.jpg');
+  background-image: url('/assests/header.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 300px;
@@ -238,8 +259,15 @@ header nav .show-link a {
   margin-top: 30px;
   width: 70%;
   height: 10%;
+  border: none;
   border-radius: 0.5rem;
-  background-color: #ADD8E6;
+  color: white;
+  background-color: #4b4cde;
+}
+@media (min-width: 550px) {
+  .top-section .overlay button {
+    width: 32%;
+  }
 }
 @media (min-width: 800px) {
   .top-section .overlay button {
@@ -249,24 +277,54 @@ header nav .show-link a {
 @media (min-width: 800px) {
   .top-section {
     height: 500px;
+    width: 95%;
+    margin: 3rem;
   }
 }
 .main-section {
+  margin: 1rem auto;
+}
+.main-section .info {
+  text-align: center;
+}
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 98%;
+}
+@media (min-width: 800px) {
+  .card-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    margin: 3rem;
+  }
+}
+.card-section .card-login {
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   margin: 1rem;
+}
+.card-section .card-login img {
+  width: 80%;
 }
 :root html {
   font-size: 62.5%;
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 h1 {
   font-size: 4rem;

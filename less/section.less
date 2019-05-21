@@ -1,7 +1,7 @@
 .top-section{
     position: relative;
     width:100%;
-    background-image: url('/assests/card.jpg');
+    background-image: url('/assests/header.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 300px;
@@ -31,8 +31,13 @@
          margin-top: 30px;
          width: 70%;
          height: 10%;
+         border: none;
          border-radius: .5rem;
+         color: white;
          background-color: @lightBlueColor;
+         @media(@mediaTab) {
+             width: 32%
+         }
          @media(@mediaDesktop) {
              width: 30%
          }
@@ -40,9 +45,34 @@
     }
     @media(@mediaDesktop) {
         height: 500px;
+        width: 95%;
+        margin: 3rem
     }
 }
 
 .main-section{
-    margin: 1rem;
+    margin: 1rem auto;
+    .info{
+        text-align: center;
+    }
+}
+
+.card-section{
+    .displayFlex(column, space-around);
+    width: 98%;
+    @media(@mediaDesktop){
+        .displayFlex(row, space-around);
+        width: 95%;
+        margin: 3rem
+    };
+    .card-login{
+        text-align: center;
+        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        margin: 1rem;
+        img {
+            width: 80%
+        }
+    }
 }
