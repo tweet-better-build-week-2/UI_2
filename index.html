@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" async></script>
     <script src="/Component/navigationComponent/navigation.js" async></script>
+    <script src="/Component/carousel/carousel.js" async></script>
     <title>Tweet Better</title>
 </head>
 <body>
@@ -19,46 +21,84 @@
                 </div>
                 <div class="right-nav-item">
                         <div class="show-nav-item">
-                            <i class="fas fa-search"></i>
+                            <div class="search">
+                                <input type="text">
+                                <i class="fas fa-search"></i>
+                            </div>
                             <i class="fas fa-bars"></i>
                         </div>
                 </div>
                 <div class="links">
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
                     <a href="#">Login</a>
                 </div>
             </nav>
             
             </header>
-            <section class="top-section">
-                <div class="overlay" >
-                    <h1>WELCOME TO <br> TWEET BETTER</h1>
-                    <h3>Be Less Offensive</h3>
-                    <p>Make and keep more friends</p>
-                    <button>SIGN UP</button>
+        <section class="top-section">
+            <div class="overlay" >
+                <h1>WELCOME TO TWEET BETTER</h1>
+                <h3>Be Less Offensive</h3>
+                <p>Make and keep more friends</p>
+                <button>Get Started</button>
+            </div>
+        </section>
+        <section class="main-section">
+            <div class="info">
+                <h2> What We Do</h2>
+                <!-- <p>You Login your twitter details, write your tweet and we help you check, how offensive it might be</p> -->
+               <p>we are dedicated to catching swearing and bad faith texts but that
+            feels limiting. we strive to be used in a way that can be used by
+            professionals and the average tweeter.
+            We went out to build something professionals could use in stressful
+            work sessions. Imagine you need to let your coworker know you got
+            the update, fast, but you're working on a hard problem you need to
+            keep your attention on. A response you think is neutral to your
+            coworker can easily sound snappy.
+            Maybe your a rally coordinator and you're genuinely excited about
+            this new rally, but being out all day has drained you emotionally
+            and everything sounds flat and unappreciative.
+            For Twitter specifically: we see a lot of us trying to make
+            professional personas on there, and build friendly connections. So
+            we thought of such a predictor could be used to try to craft a
+            particular score range each time and keep a consistent mood with
+            your coworkers or audience.</p> 
+            </div>
+            <div class="card-section">
+                <div class="card-login">
+                    <h2>Login</h2>
+                    <img src="/assests/card-1.png" alt="login" srcset="">
                 </div>
-            </section>
-            <section class="main-section">
-                <div class="info">
-                    <h2> What We Do</h2>
-                    <p>You Login your twitter details, write your tweet and we help you check, how offensive it might be</p>
+                <div class="card-login">
+                    <h2>Check Tweet</h2>
+                    <img src="/assests/card-2.png" alt="login" srcset="">
                 </div>
-                <div class="card-section">
-                    <div class="card-login">
-                        <h2>Login</h2>
-                        <img src="/assests/card-1.png" alt="login" srcset="">
-                    </div>
-                    <div class="card-login">
-                        <h2>Check Tweet</h2>
-                        <img src="/assests/card-2.png" alt="login" srcset="">
-                    </div>
-                    <div class="card-login">
-                        <h2>Get Result</h2>
-                        <img src="/assests/card-3.png" alt="login" srcset="">
-                    </div>
+                <div class="card-login">
+                    <h2>Get Result</h2>
+                    <img src="/assests/card-3.png" alt="login" srcset="">
                 </div>
-            </section>
+            </div>
+        </section>
+        <section class="carousel">
+            <h2>Here are some users testimonies</h2>
+            <div class="carousel-card">
+                <button class="left-slide"><</button>
+                <div class="slide-carousel">
+
+                </div>
+                <button class="right-slide">></button>
+            </div>
+        </section>
+        <footer>
+            <p>copyright @lambda tweet better group</p>
+            <div class="logos">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fas fa-lambda"></i>
+                <i class="fab fa-github"></i>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
