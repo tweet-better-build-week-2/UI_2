@@ -3,7 +3,8 @@
     width:100%;
     background-image: url('/assests/header.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
     height: 300px;
     text-align: center;
     padding: 20px;
@@ -14,7 +15,7 @@
         @media(@mediaDesktop) {
             line-height: 2.5;
             font-size: 3rem;
-            margin-top: 5rem;
+            margin-top: 10rem;
         }
     };
     
@@ -26,9 +27,9 @@
      right: 0;
      bottom: 0;
      background-color: rgba(0,0,0,0.4);
-
+    text-align: center;
      button{
-         margin-top: 30px;
+        margin-top: 15px;
          width: 70%;
          height: 10%;
          border: none;
@@ -36,17 +37,19 @@
          color: white;
          background-color: @lightBlueColor;
          @media(@mediaTab) {
-             width: 32%
+             width: 32%;
+             margin-top: 20px;
          }
          @media(@mediaDesktop) {
-             width: 30%
+             width: 30%;
+             margin-top: 30px;
          }
      }
     }
     @media(@mediaDesktop) {
         height: 500px;
-        width: 95%;
-        margin: 3rem
+        width: 100%;
+        margin-bottom: 1rem
     }
 }
 
@@ -54,6 +57,10 @@
     margin: 1rem auto;
     .info{
         text-align: center;
+        padding: 1rem;
+        p{
+            font-size: 1rem
+        }
     }
 }
 
@@ -67,12 +74,17 @@
     };
     .card-login{
         text-align: center;
-        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        .card;
         margin: 1rem;
+        padding: 1rem;
+        border-radius: .4rem;
         img {
-            width: 80%
+            width: 100%
+        }
+        @media(@mediaDesktop) {
+            width: 31%;
+            // transform: scale(1.5);
+            // transition: transform .2s;
         }
     }
 }

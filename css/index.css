@@ -136,6 +136,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.card {
+  -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+}
 header {
   display: flex;
   flex-direction: row;
@@ -143,7 +148,7 @@ header {
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: #4b4cde;
+  background-color: #349AFA;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -169,7 +174,7 @@ header nav .right-nav-item {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-left: 24%;
+  margin-left: 20%;
 }
 header nav .right-nav-item .show-nav-item {
   display: flex;
@@ -229,7 +234,8 @@ header nav .show-link a {
   width: 100%;
   background-image: url('/assests/header.png');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   height: 300px;
   text-align: center;
   padding: 20px;
@@ -243,7 +249,7 @@ header nav .show-link a {
   .top-section h1 {
     line-height: 2.5;
     font-size: 3rem;
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
 }
 .top-section .overlay {
@@ -254,31 +260,34 @@ header nav .show-link a {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 .top-section .overlay button {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 70%;
   height: 10%;
   border: none;
   border-radius: 0.5rem;
   color: white;
-  background-color: #4b4cde;
+  background-color: #349AFA;
 }
 @media (min-width: 550px) {
   .top-section .overlay button {
     width: 32%;
+    margin-top: 20px;
   }
 }
 @media (min-width: 800px) {
   .top-section .overlay button {
     width: 30%;
+    margin-top: 30px;
   }
 }
 @media (min-width: 800px) {
   .top-section {
     height: 500px;
-    width: 95%;
-    margin: 3rem;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 .main-section {
@@ -286,6 +295,10 @@ header nav .show-link a {
 }
 .main-section .info {
   text-align: center;
+  padding: 1rem;
+}
+.main-section .info p {
+  font-size: 1rem;
 }
 .card-section {
   display: flex;
@@ -304,13 +317,99 @@ header nav .show-link a {
 }
 .card-section .card-login {
   text-align: center;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
   margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
 }
 .card-section .card-login img {
-  width: 80%;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .card-section .card-login {
+    width: 31%;
+  }
+}
+footer {
+  width: 100%;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #349AFA;
+  color: white;
+}
+footer p {
+  font-size: 0.5rem;
+}
+@media (min-width: 550px) {
+  footer p {
+    font-size: 1rem;
+  }
+}
+footer .logos {
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+footer .logos i {
+  padding: 0 0.5rem;
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.carousel-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.carousel-card button {
+  display: none;
+}
+@media (min-width: 800px) {
+  .carousel-card button {
+    display: inline;
+    background-color: #349AFA;
+    border: none;
+    margin: 1rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+}
+.carousel-card .slide-carousel {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  padding: 0.5rem;
+}
+.carousel-card .slide-carousel img {
+  width: 20%;
+}
+.carousel-card .slide-carousel p {
+  font-size: 0.7rem;
+  padding: 1rem;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  .carousel-card .slide-carousel p {
+    font-size: 1.5rem;
+  }
 }
 :root html {
   font-size: 62.5%;
@@ -330,10 +429,13 @@ h1 {
   font-size: 4rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 p {
   line-height: 1.5;
