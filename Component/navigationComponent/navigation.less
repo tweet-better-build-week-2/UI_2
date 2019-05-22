@@ -16,6 +16,9 @@ header{
         .left-nav-item{
             a{
                 color: white;
+                @media(@mediaDesktop){
+                  font-size: 2.5rem;
+                }
             }
             @media(@mediaTab){
                 margin-left: 0;
@@ -23,13 +26,25 @@ header{
         };
         .right-nav-item{
             .displayFlex(row, flex-end);
-            margin-left: 20%;
+            margin-left: 10%;
+            @media(@mediaTab){
+                margin-left: 20%;
+            };
             .show-nav-item{
                 .displayFlex(row, space-around); 
+                .search{
+                    input{
+                        width: 70%;
+                        height: 80%;
+                        border: none;
+                    }
+                    i {
+                        padding: 0 .5rem;
+                        margin-left: 10px
+                    }
+                }
                 i{
                     color: white;
-                    padding: 0 25px;
-                    margin-left:20px;
                 }
                 @media(@mediaTab) {
                     display: none;
@@ -44,12 +59,16 @@ header{
                     padding: 2rem 1rem;
                     color: white;
                     text-decoration: none;
+                    &:hover,&:active{
+                        border-bottom: 2px solid white;
+                    };
                 }
             };
             @media(@mediaDesktop) {
             .displayFlex(row, space-around);
             a {
-                padding: 2rem 3rem;
+                padding: 2rem 2rem;
+                font-size: 1.5rem;
             }
             
             }
@@ -63,8 +82,5 @@ header{
                 color: white
             }
         }
-        @media(@mediaTab){
-            // margin-left: 13rem;
-        };
     }
 }

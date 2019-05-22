@@ -165,7 +165,12 @@ header nav {
 header nav .left-nav-item a {
   color: white;
 }
-@media (min-width: 550px) {
+@media (min-width: 800px) {
+  header nav .left-nav-item a {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 500px) {
   header nav .left-nav-item {
     margin-left: 0;
   }
@@ -174,19 +179,31 @@ header nav .right-nav-item {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-left: 20%;
+  margin-left: 10%;
+}
+@media (min-width: 500px) {
+  header nav .right-nav-item {
+    margin-left: 20%;
+  }
 }
 header nav .right-nav-item .show-nav-item {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+header nav .right-nav-item .show-nav-item .search input {
+  width: 70%;
+  height: 80%;
+  border: none;
+}
+header nav .right-nav-item .show-nav-item .search i {
+  padding: 0 0.5rem;
+  margin-left: 10px;
+}
 header nav .right-nav-item .show-nav-item i {
   color: white;
-  padding: 0 25px;
-  margin-left: 20px;
 }
-@media (min-width: 550px) {
+@media (min-width: 500px) {
   header nav .right-nav-item .show-nav-item {
     display: none;
   }
@@ -194,7 +211,7 @@ header nav .right-nav-item .show-nav-item i {
 header nav .links {
   display: none;
 }
-@media (min-width: 550px) {
+@media (min-width: 500px) {
   header nav .links {
     display: flex;
     flex-direction: row;
@@ -205,6 +222,10 @@ header nav .links {
     color: white;
     text-decoration: none;
   }
+  header nav .links a:hover,
+  header nav .links a:active {
+    border-bottom: 2px solid white;
+  }
 }
 @media (min-width: 800px) {
   header nav .links {
@@ -213,7 +234,8 @@ header nav .links {
     justify-content: space-around;
   }
   header nav .links a {
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
   }
 }
 header nav .show-link {
@@ -226,8 +248,6 @@ header nav .show-link a {
   padding: 0.1rem;
   text-decoration: none;
   color: white;
-}
-@media (min-width: 550px) {
 }
 .top-section {
   position: relative;
@@ -249,7 +269,7 @@ header nav .show-link a {
   .top-section h1 {
     line-height: 2.5;
     font-size: 3rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 }
 .top-section .overlay {
@@ -270,17 +290,27 @@ header nav .show-link a {
   border-radius: 0.5rem;
   color: white;
   background-color: #349AFA;
+  font-size: 1rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 500px) {
   .top-section .overlay button {
     width: 32%;
     margin-top: 20px;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 800px) {
   .top-section .overlay button {
     width: 30%;
     margin-top: 30px;
+  }
+  .top-section .overlay button:hover {
+    font-size: 1.7rem;
+    width: 32%;
+    background-color: #fff;
+    color: #349AFA;
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
   }
 }
 @media (min-width: 800px) {
@@ -343,7 +373,7 @@ footer {
 footer p {
   font-size: 0.5rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 500px) {
   footer p {
     font-size: 1rem;
   }
@@ -356,7 +386,6 @@ footer .logos {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 footer .logos i {
   padding: 0 0.5rem;
@@ -373,6 +402,7 @@ footer .logos i {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-top: 1rem;
 }
 .carousel-card button {
   display: none;
@@ -380,12 +410,14 @@ footer .logos i {
 @media (min-width: 800px) {
   .carousel-card button {
     display: inline;
+    color: white;
     background-color: #349AFA;
     border: none;
     margin: 1rem;
     font-size: 2rem;
     border-radius: 50%;
     text-align: center;
+    outline: none;
   }
 }
 .carousel-card .slide-carousel {
@@ -400,6 +432,17 @@ footer .logos i {
 }
 .carousel-card .slide-carousel img {
   width: 20%;
+  height: 50px;
+}
+@media (min-width: 500px) {
+  .carousel-card .slide-carousel img {
+    height: 100px;
+  }
+}
+@media (min-width: 800px) {
+  .carousel-card .slide-carousel img {
+    height: 200px;
+  }
 }
 .carousel-card .slide-carousel p {
   font-size: 0.7rem;
@@ -417,6 +460,12 @@ footer .logos i {
 html,
 body {
   font-family: 'Montserrat', sans-serif;
+}
+@media (min-width: 500px) {
+  html,
+  body {
+    margin-top: 3rem;
+  }
 }
 h1,
 h2,

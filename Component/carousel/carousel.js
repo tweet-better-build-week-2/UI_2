@@ -48,7 +48,7 @@ class Carousel {
 
     showInterval () {
         setInterval(()=>{
-            this.show()
+            this.show();
         }, 5000)
     }
 }
