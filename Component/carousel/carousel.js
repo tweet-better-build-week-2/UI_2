@@ -52,16 +52,16 @@ class Carousel {
 
     slideBtn (e) {
         this.show()
-        e.classList.contains('right-slide') ? TweenMax.from(this.carouselDiv, 2, {x:-100,opacity: 0.1})
-        : TweenMax.from(this.carouselDiv, 2, {x:100,opacity: 0.1})
+        e.classList.contains('right-slide') ? TweenMax.from(this.carouselDiv, 1, {x:-100,opacity: 0.1})
+        : TweenMax.from(this.carouselDiv, 1, {x:100,opacity: 0.1})
 
     }
 
     showInterval () {
         setInterval(()=>{
             this.show();
-            TweenMax.from(this.carouselDiv, 2, {x:-100,opacity: 0.1})
-        }, 5000)
+            TweenMax.from(this.carouselDiv, 2, {scale:1.5,opacity: 0.1})
+        }, 10000)
     }
 }
 

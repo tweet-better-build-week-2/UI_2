@@ -195,6 +195,7 @@ header nav .right-nav-item .show-nav-item .search input {
   width: 70%;
   height: 80%;
   border: none;
+  outline: none;
 }
 header nav .right-nav-item .show-nav-item .search i {
   padding: 0 0.5rem;
@@ -331,6 +332,7 @@ header nav .show-link a {
 }
 .main-section .info p {
   font-size: 1rem;
+  margin: 0.5rem 2rem;
 }
 .card-section {
   display: flex;
@@ -362,6 +364,58 @@ header nav .show-link a {
 @media (min-width: 800px) {
   .card-section .card-login {
     width: 31%;
+  }
+}
+.about-section {
+  margin-top: 7rem;
+}
+.about-section h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .about-section h1 {
+    font-size: 3rem;
+  }
+}
+.team-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 10%;
+}
+.team-info .team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  margin: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 500px) {
+  .team-info .team-card {
+    width: 45%;
+  }
+}
+.team-info .team-card img {
+  width: 20%;
+}
+@media (min-width: 500px) {
+  .team-info .team-card i {
+    height: 100%;
+    font-size: 250%;
+    margin: 0.5rem;
+  }
+  .team-info .team-card i:hover {
+    background-color: #349AFA;
+    color: white;
   }
 }
 footer {
@@ -421,6 +475,10 @@ footer .logos i {
     text-align: center;
     outline: none;
   }
+  .carousel-card button:hover {
+    background-color: white;
+    color: #349AFA;
+  }
 }
 .carousel-card .slide-carousel {
   background-color: whitesmoke;
@@ -462,6 +520,7 @@ footer .logos i {
 }
 html,
 body {
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
 @media (min-width: 500px) {

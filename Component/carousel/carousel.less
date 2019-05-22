@@ -19,14 +19,19 @@
         font-size: 2rem;
         border-radius: 50%;
         text-align: center;
-        outline: none
+        outline: none;
+
+        &:hover{
+            background-color: white;
+            color: @lightBlueColor;
+        }
         }
     }
 
     .slide-carousel{
         background-color: whitesmoke;
         z-index: -1;
-        width: 100%;
+        width: @width;
         height: 20%;
         text-align: center;
         .card;

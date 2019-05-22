@@ -69,7 +69,8 @@
         text-align: center;
         padding: 1rem;
         p{
-            font-size: 1rem
+            font-size: 1rem;
+            margin: .5rem 2rem;
         }
     }
 }
@@ -93,8 +94,52 @@
         }
         @media(@mediaDesktop) {
             width: 31%;
-            // transform: scale(1.5);
-            // transition: transform .2s;
+        }
+    }
+}
+
+.about-section{
+    margin-top: 7rem;
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        @media(@mediaTab) {
+            font-size: 3rem
+        }
+    }
+}
+.team-info{
+    .displayFlex(row, space-around);
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    // margin-top: 4rem;
+    .team-card{
+        .displayFlex(column, center);
+        align-items: center;
+        text-align: center;
+        .card;
+        margin: 1rem;
+        padding: 1rem;
+        @media(@mediaTab) {
+            width: 45%
+        }
+        img{
+            width:20%;
+        }
+
+        i{
+            @media(@mediaTab) {
+                height: 100%;
+                font-size: 250%;
+                margin: .5rem;
+
+                &:hover{
+                    background-color: @lightBlueColor;
+                    color: white;
+                }
+            }
         }
     }
 }
