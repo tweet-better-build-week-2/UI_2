@@ -53,6 +53,7 @@ header{
         }
         .links{
             display: none;
+            transition: display .2s;
             @media(@mediaTab) {
                 .displayFlex(row, center);
                 a {
@@ -75,9 +76,10 @@ header{
         }
         .show-link {
             .displayFlex(column, space-around);
+            align-items: flex-start;
             text-align: center;
             a {
-                padding: .1rem;
+                padding: .2rem;
                 text-decoration: none;
                 color: white
             }

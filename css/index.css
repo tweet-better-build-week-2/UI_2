@@ -210,6 +210,7 @@ header nav .right-nav-item .show-nav-item i {
 }
 header nav .links {
   display: none;
+  transition: display 0.2s;
 }
 @media (min-width: 500px) {
   header nav .links {
@@ -242,10 +243,11 @@ header nav .show-link {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-start;
   text-align: center;
 }
 header nav .show-link a {
-  padding: 0.1rem;
+  padding: 0.2rem;
   text-decoration: none;
   color: white;
 }
@@ -422,6 +424,7 @@ footer .logos i {
 }
 .carousel-card .slide-carousel {
   background-color: whitesmoke;
+  z-index: -1;
   width: 100%;
   height: 20%;
   text-align: center;

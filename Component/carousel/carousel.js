@@ -28,8 +28,12 @@ class Carousel {
         this.leftSlideBtn = this.carouselElement.querySelector('.left-slide');
         window.addEventListener('load', this.loadCarousel.bind(this));
         this.showInterval()
-        this.rightSlideBtn.addEventListener('click', this.show.bind(this));
-        this.leftSlideBtn.addEventListener('click', this.show.bind(this))
+        this.rightSlideBtn.addEventListener('click', (e)=>{
+            this.slideBtn(e.target)
+        });
+        this.leftSlideBtn.addEventListener('click',  (e)=>{
+            this.slideBtn(e.target)
+        });
     }
 
     loadCarousel () {
@@ -44,11 +48,19 @@ class Carousel {
     show () {
         this.count > 3 ? this.count = 1 : this.count++;
         this.loadCarousel();
+   }
+
+    slideBtn (e) {
+        this.show()
+        e.classList.contains('right-slide') ? TweenMax.from(this.carouselDiv, 2, {x:-100,opacity: 0.1})
+        : TweenMax.from(this.carouselDiv, 2, {x:100,opacity: 0.1})
+
     }
 
     showInterval () {
         setInterval(()=>{
             this.show();
+            TweenMax.from(this.carouselDiv, 2, {x:-100,opacity: 0.1})
         }, 5000)
     }
 }
