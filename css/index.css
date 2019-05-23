@@ -165,9 +165,9 @@ header nav {
 header nav .left-nav-item a {
   color: white;
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   header nav .left-nav-item a {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 500px) {
@@ -211,7 +211,9 @@ header nav .right-nav-item .show-nav-item i {
 }
 header nav .links {
   display: none;
-  transition: display 0.2s;
+}
+header nav .links a {
+  padding: 2rem 1rem;
 }
 @media (min-width: 500px) {
   header nav .links {
@@ -224,12 +226,11 @@ header nav .links {
     color: white;
     text-decoration: none;
   }
-  header nav .links a:hover,
-  header nav .links a:active {
+  header nav .links a:hover {
     border-bottom: 2px solid white;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   header nav .links {
     display: flex;
     flex-direction: row;
@@ -237,17 +238,19 @@ header nav .links {
   }
   header nav .links a {
     padding: 2rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 header nav .show-link {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-left: 1rem;
   align-items: flex-start;
   text-align: center;
 }
 header nav .show-link a {
+  display: block;
   padding: 0.2rem;
   text-decoration: none;
   color: white;
@@ -261,14 +264,14 @@ header nav .show-link a {
   background-position: center;
   height: 300px;
   text-align: center;
-  padding: 20px;
+  padding: 1.5rem;
 }
 .top-section h1 {
-  font-size: 30px;
-  margin-top: 30px;
+  font-size: 1.5rem;
+  margin-top: 3rem;
   line-height: 2;
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   .top-section h1 {
     line-height: 2.5;
     font-size: 3rem;
@@ -277,7 +280,7 @@ header nav .show-link a {
 }
 .top-section .overlay {
   position: absolute;
-  color: #fff;
+  color: white;
   top: 0;
   left: 0;
   right: 0;
@@ -298,25 +301,25 @@ header nav .show-link a {
 @media (min-width: 500px) {
   .top-section .overlay button {
     width: 32%;
-    margin-top: 20px;
+    margin-top: 1.2rem;
     font-size: 1.3rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   .top-section .overlay button {
     width: 30%;
-    margin-top: 30px;
+    margin-top: 1.7rem;
   }
   .top-section .overlay button:hover {
     font-size: 1.7rem;
     width: 32%;
-    background-color: #fff;
+    background-color: white;
     color: #349AFA;
     transition: all 0.3s;
     transition-timing-function: ease-in-out;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   .top-section {
     height: 500px;
     width: 100%;
@@ -328,10 +331,22 @@ header nav .show-link a {
 }
 .main-section .info {
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
+  -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
+  margin: 1rem;
+}
+@media (min-width: 500px) {
+  .main-section .info {
+    padding: 1rem;
+    margin: 0.5rem 2.9rem;
+  }
+}
+.main-section .info h2 {
+  font-weight: bolder;
 }
 .main-section .info p {
-  font-size: 1rem;
   margin: 0.5rem 2rem;
 }
 .card-section {
@@ -340,7 +355,12 @@ header nav .show-link a {
   justify-content: space-around;
   width: 98%;
 }
-@media (min-width: 800px) {
+@media (min-width: 500px) {
+  .card-section {
+    margin: 1.9rem;
+  }
+}
+@media (min-width: 760px) {
   .card-section {
     display: flex;
     flex-direction: row;
@@ -358,16 +378,31 @@ header nav .show-link a {
   padding: 1rem;
   border-radius: 0.4rem;
 }
+@media (min-width: 500px) {
+  .card-section .card-login {
+    margin: 1.9rem;
+  }
+}
 .card-section .card-login img {
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 500px) {
+  .card-section .card-login img {
+    width: 80%;
+  }
+}
+@media (min-width: 760px) {
   .card-section .card-login {
     width: 31%;
   }
 }
 .about-section {
-  margin-top: 7rem;
+  margin-top: 3rem;
+}
+@media (min-width: 500px) {
+  .about-section {
+    margin-top: 3.7rem;
+  }
 }
 .about-section h1 {
   font-size: 2rem;
@@ -393,21 +428,49 @@ header nav .show-link a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 90%;
+  border-radius: 0.3rem;
   -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
   -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
   box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
-  margin: 1rem;
+  margin: 1rem 0.5rem;
   padding: 1rem;
+  background-color: whitesmoke;
 }
 @media (min-width: 500px) {
   .team-info .team-card {
     width: 45%;
   }
 }
-.team-info .team-card img {
-  width: 20%;
+.team-info .team-card h3 {
+  margin: 0.5rem 0;
+  font-weight: bolder;
 }
 @media (min-width: 500px) {
+  .team-info .team-card h3 {
+    font-size: 1.3rem;
+  }
+}
+.team-info .team-card p {
+  font-size: 1rem;
+}
+.team-info .team-card img {
+  width: 50%;
+}
+@media (min-width: 760px) {
+}
+.team-info .team-card a {
+  text-decoration: none;
+  background-color: white;
+  color: #349AFA;
+}
+@media (min-width: 500px) {
+  .team-info .team-card i {
+    font-size: 100%;
+    margin: 0.5rem;
+  }
+}
+@media (min-width: 760px) {
   .team-info .team-card i {
     height: 100%;
     font-size: 250%;
@@ -463,7 +526,7 @@ footer .logos i {
 .carousel-card button {
   display: none;
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   .carousel-card button {
     display: inline;
     color: white;
@@ -500,7 +563,7 @@ footer .logos i {
     height: 100px;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   .carousel-card .slide-carousel img {
     height: 200px;
   }
@@ -510,7 +573,7 @@ footer .logos i {
   padding: 1rem;
   text-align: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   .carousel-card .slide-carousel p {
     font-size: 1.5rem;
   }
@@ -520,6 +583,7 @@ footer .logos i {
 }
 html,
 body {
+  font-display: fallback;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
@@ -537,18 +601,38 @@ h5 {
   font-family: 'Montserrat', sans-serif;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+}
+@media (min-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
+}
+@media (min-width: 500px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 500px) {
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 h4 {
   font-size: 1rem;
 }
 p {
   line-height: 1.5;
-  font-size: 1.6rem;
+  font-size: 1rem;
+}
+@media (min-width: 500px) {
+  p {
+    font-size: 1.6rem;
+  }
 }
