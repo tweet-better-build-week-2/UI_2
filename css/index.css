@@ -293,11 +293,19 @@ header nav .show-link a {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
-.top-section .overlay button {
-  margin-top: 15px;
+.top-section .overlay .btn {
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #349AFA;
+}
+.top-section .overlay .button {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
   width: 50%;
   height: 10%;
-  border: none;
+  padding: 0.5rem 1.3rem;
   outline: none;
   border-radius: 0.5rem;
   color: white;
@@ -305,18 +313,20 @@ header nav .show-link a {
   font-size: 1rem;
 }
 @media (min-width: 500px) {
-  .top-section .overlay button {
+  .top-section .overlay .button {
     width: 32%;
     margin-top: 1.2rem;
     font-size: 1.3rem;
+    padding: 0.4rem 1.3rem;
   }
 }
 @media (min-width: 760px) {
-  .top-section .overlay button {
+  .top-section .overlay .button {
     width: 30%;
     margin-top: 1.7rem;
+    padding: 1rem 1.3rem;
   }
-  .top-section .overlay button:hover {
+  .top-section .overlay .button:hover {
     font-size: 1.7rem;
     width: 32%;
     background-color: white;
@@ -589,8 +599,8 @@ footer .logos i {
 }
 html,
 body {
-  font-display: fallback;
   height: 100%;
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 @media (min-width: 500px) {
