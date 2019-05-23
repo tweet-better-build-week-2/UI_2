@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" async></script>
     <script src="/Component/navigationComponent/navigation.js" async></script>
     <script src="/Component/carousel/carousel.js" async></script>
@@ -18,7 +20,7 @@
         <header>
             <nav>
                 <div class="left-nav-item">
-                        <a>Tweet Better</a>
+                        <a href="#">Tweet Better</a>
                 </div>
                 <div class="right-nav-item">
                         <div class="show-nav-item">
@@ -66,28 +68,27 @@
             your coworkers or audience.</p> 
             </article>
             <div class="card-section">
-                <div class="card-login">
+                <div class="card-login" data-aos="fade-right">
                     <h2>Login</h2>
-                    <img src="/assests/card-1.png" alt="login" srcset="">
+                    <img src="/assests/card-1.png" alt="login">
                 </div>
                 <div class="card-login">
                     <h2>Check Tweet</h2>
-                    <img src="/assests/card-2.png" alt="check tweet" srcset="">
+                    <img src="/assests/card-2.png" alt="check tweet">
                 </div>
-                <div class="card-login">
+                <div class="card-login" data-aos="fade-left">
                     <h2>Get Result</h2>
-                    <img src="/assests/card-3.png" alt="Get result" srcset="">
+                    <img src="/assests/card-3.png" alt="Get result">
                 </div>
             </div>
         </main>
         <section class="carousel">
             <h2>Here are some users testimonies</h2>
             <div class="carousel-card">
-                <button class="left-slide"><</button>
+                <!-- <button class="left-slide"><</button> -->
                 <div class="slide-carousel">
-
                 </div>
-                <button class="right-slide">></button>
+                <!-- <button class="right-slide">></button> -->
             </div>
         </section>
         <footer>

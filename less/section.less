@@ -30,7 +30,7 @@
     text-align: center;
      button{
         margin-top: 15px;
-         width: 70%;
+         width: 50%;
          height: 10%;
          border: none;
          border-radius: .5rem;
@@ -116,7 +116,7 @@
 }
 
 .about-section{
-    margin-top: 3rem;
+    margin: 3rem 0;
     @media(@mediaTab) {
         margin-top: 3.7rem;
     }
@@ -160,28 +160,28 @@
         }
         img{
             width:50%;
+            border-radius: 50%;
         }
 
         a{
             text-decoration: none;
-            background-color:  @white;
+            background-color:  inherit;
             color:@lightBlueColor
         }
 
         i{
+            &:hover{
+                background-color: @lightBlueColor;
+                color: @white;
+                border-radius: 10%;
+            }
             @media(@mediaTab) {
                 font-size: 100%;
-                // margin: .5rem;
             };
             @media(@mediaDesktop) {
                 height: 100%;
                 font-size: 250%;
                 margin: .5rem;
-
-                &:hover{
-                    background-color: @lightBlueColor;
-                    color: @white;
-                }
             }
         }
     }

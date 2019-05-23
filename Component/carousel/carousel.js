@@ -1,3 +1,5 @@
+AOS.init();
+
 const testimonies = [
     {
         id: 1, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste rem quaerat ducimus natus reiciendis quisquam deleniti quidem aperiam itaque laudantium assumenda reprehenderit, minima exercitationem sequi, beatae ut officia praesentium?" ,
@@ -37,6 +39,7 @@ class Carousel {
     }
 
     loadCarousel () {
+        this.count > 3 ? this.count = 1 : this.count++;
         testimonies.map((testimony, index) =>{
             if (index+1 === this.count) {
                 this.img.src = `../assests/${testimony.img}`
@@ -44,28 +47,32 @@ class Carousel {
                 this.img.alt = testimony.alt;
             }
         })
+        TweenMax.from(this.carouselDiv, .5, {scale:1.02,opacity: 0.7})
     }
 
     show () {
-        this.count > 3 ? this.count = 1 : this.count++;
+        
         this.loadCarousel();
    }
 
     slideBtn (e) {
         this.show()
         clearInterval(this.showInterval.bind(this))
-        e.classList.contains('right-slide') ? TweenMax.from(this.carouselDiv, 1, {x:-300, ease: Power1.easeOut})
-        : TweenMax.from(this.carouselDiv, 1, {x:300, ease: Power1.easeOut})
-
+        e.classList.contains('right-slide') ? TweenMax.from(this.carouselDiv, 1, {x:-100, ease: Power1.easeOut})
+        : TweenMax.from(this.carouselDiv, 1, {x:100, ease: Power1.easeOut})
+        // TweenMax.from(this.carouselDiv, .5, {scale:1.02,opacity: 0.7})
     }
 
     showInterval () {
         setInterval(()=>{
             this.show();
             TweenMax.from(this.carouselDiv, 1, {scale:1.3,opacity: 0.7})
-        }, 20000)
+        }, 5000)
     }
 }
 
 const carouselElement = document.querySelector('.carousel-card');
 new Carousel(carouselElement);
+
+
+  

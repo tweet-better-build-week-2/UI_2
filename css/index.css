@@ -164,6 +164,11 @@ header nav {
 }
 header nav .left-nav-item a {
   color: white;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+header nav .left-nav-item a:hover {
+  border-bottom: 2px solid white;
 }
 @media (min-width: 760px) {
   header nav .left-nav-item a {
@@ -290,7 +295,7 @@ header nav .show-link a {
 }
 .top-section .overlay button {
   margin-top: 15px;
-  width: 70%;
+  width: 50%;
   height: 10%;
   border: none;
   border-radius: 0.5rem;
@@ -397,7 +402,7 @@ header nav .show-link a {
   }
 }
 .about-section {
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 @media (min-width: 500px) {
   .about-section {
@@ -456,11 +461,17 @@ header nav .show-link a {
 }
 .team-info .team-card img {
   width: 50%;
+  border-radius: 50%;
 }
 .team-info .team-card a {
   text-decoration: none;
-  background-color: white;
+  background-color: inherit;
   color: #349AFA;
+}
+.team-info .team-card i:hover {
+  background-color: #349AFA;
+  color: white;
+  border-radius: 10%;
 }
 @media (min-width: 500px) {
   .team-info .team-card i {
@@ -472,10 +483,6 @@ header nav .show-link a {
     height: 100%;
     font-size: 250%;
     margin: 0.5rem;
-  }
-  .team-info .team-card i:hover {
-    background-color: #349AFA;
-    color: white;
   }
 }
 footer {
@@ -546,6 +553,8 @@ footer .logos i {
   width: 100%;
   height: 20%;
   text-align: center;
+  transform: scale(1);
+  transform: translateX(100);
   -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
   -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
   box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.62);
