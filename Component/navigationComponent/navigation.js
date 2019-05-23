@@ -2,18 +2,23 @@ class NavBar {
     constructor(navElement) {
         this.navElement = navElement;
         this.handburger = this.navElement.querySelector('.fa-bars');
+        this.isOpen = false
         this.handburger.addEventListener('click', this.show.bind(this))
     }
 
     show () {
        const linkNav= this.navElement.querySelector('.links');
        linkNav.classList.toggle('show-link');
-    //    linkNav.classList.contains('show-link') ? TweenMax.to(linkNav, 2, {y:-10, opacity:0.7})
-    //    : TweenMax.to(linkNav, 2, {y:-250}) 
-    //    ? TweenMax.from(linkNav,2,{y:-100,x:-100, delay:1}) 
-        // : TweenMax.from(linkNav,2,{y:-100,delay:1})
-    //    
+        if (this.isOpen) {
+            TweenMax.from(linkNav, 1, {y:100})
+            this.isOpen = false
+        } else {
+            TweenMax.from(linkNav, 1, {y:-50})
+            this.isOpen = true
+        }
     }
+
+    
 }
 
 const navElement = document.querySelector('nav');

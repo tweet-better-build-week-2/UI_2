@@ -7,7 +7,7 @@
 .carousel-card{
     .displayFlex(row, space-around);
     align-items: center;
-    margin-top: 1rem;
+    margin-top: @margin;
     button {
         display: none;
         @media(@mediaDesktop) {
@@ -15,29 +15,30 @@
         color: white;
         background-color: @lightBlueColor;
         border: none;
-        margin: 1rem;
+        margin: @margin;
         font-size: 2rem;
         border-radius: 50%;
         text-align: center;
         outline: none;
 
         &:hover{
-            background-color: white;
+            background-color: @white;
             color: @lightBlueColor;
         }
         }
     }
 
     .slide-carousel{
-        background-color: whitesmoke;
+        background-color: @cardBackground;
         z-index: -1;
         width: @width;
         height: 20%;
         text-align: center;
+        transform: scale(1);
+        transform: translateX(100);
         .card;
         padding: .5rem;
         img{
-            width:20%;
             height: 50px;
             @media(@mediaTab) {
                 height: 100px;
@@ -48,7 +49,7 @@
         }
         p{
             font-size: .7rem;
-            padding: 1rem;
+            padding: @padding;
             text-align: center;
             @media(@mediaDesktop) {
                 font-size: 1.5rem

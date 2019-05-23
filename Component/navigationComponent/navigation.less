@@ -15,9 +15,14 @@ header{
         width: @width;
         .left-nav-item{
             a{
-                color: white;
+                color: @white;
+                text-decoration: none;
+                padding-bottom: @padding;
+                &:hover{
+                    border-bottom: 2px solid @white;
+                };
                 @media(@mediaDesktop){
-                  font-size: 2.5rem;
+                  font-size: 2rem;
                 }
             }
             @media(@mediaTab){
@@ -45,7 +50,7 @@ header{
                     }
                 }
                 i{
-                    color: white;
+                    color: @white;
                 }
                 @media(@mediaTab) {
                     display: none;
@@ -54,15 +59,17 @@ header{
         }
         .links{
             display: none;
-            transition: display .2s;
+            a{
+                padding: 2rem @padding;  
+            }
             @media(@mediaTab) {
                 .displayFlex(row, center);
                 a {
-                    padding: 2rem 1rem;
-                    color: white;
+                    padding: 2rem @padding;
+                    color: @white;
                     text-decoration: none;
-                    &:hover,&:active{
-                        border-bottom: 2px solid white;
+                 &:hover{
+                        border-bottom: 2px solid @white;
                     };
                 }
             };
@@ -70,19 +77,22 @@ header{
             .displayFlex(row, space-around);
             a {
                 padding: 2rem 2rem;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             
             }
         }
         .show-link {
             .displayFlex(column, space-around);
+            margin-left: 1rem;
             align-items: flex-start;
             text-align: center;
+            
             a {
+                display: block;
                 padding: .2rem;
                 text-decoration: none;
-                color: white
+                color: @white
             }
         }
     }
