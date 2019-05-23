@@ -71,7 +71,7 @@
         .card;
         margin: 1rem;
         @media(@mediaTab){
-            padding: 1rem;
+            padding: @padding;
             margin: .5rem 2.9rem;
         }
         h2{
@@ -92,13 +92,13 @@
     @media(@mediaDesktop){
         .displayFlex(row, space-around);
         width: 95%;
-        margin: 3rem
+        margin: @margin+2rem
     };
     .card-login{
         text-align: center;
         .card;
-        margin: 1rem;
-        padding: 1rem;
+        margin: @margin;
+        padding: @padding;
         border-radius: .4rem;
         @media(@mediaTab) {
             margin: 1.9rem;
@@ -141,8 +141,8 @@
         width: 90%;
         border-radius: .3rem;
         .card;
-        margin: 1rem .5rem;
-        padding: 1rem;
+        margin: @margin .5rem;
+        padding: @padding;
         background-color: @cardBackground;
         @media(@mediaTab) {
             width: 45%
@@ -160,9 +160,6 @@
         }
         img{
             width:50%;
-            @media(@mediaDesktop) {
-                // width: 100%
-            }
         }
 
         a{
@@ -174,7 +171,7 @@
         i{
             @media(@mediaTab) {
                 font-size: 100%;
-                margin: .5rem;
+                // margin: .5rem;
             };
             @media(@mediaDesktop) {
                 height: 100%;

@@ -457,8 +457,6 @@ header nav .show-link a {
 .team-info .team-card img {
   width: 50%;
 }
-@media (min-width: 760px) {
-}
 .team-info .team-card a {
   text-decoration: none;
   background-color: white;
@@ -467,7 +465,6 @@ header nav .show-link a {
 @media (min-width: 500px) {
   .team-info .team-card i {
     font-size: 100%;
-    margin: 0.5rem;
   }
 }
 @media (min-width: 760px) {
@@ -555,7 +552,6 @@ footer .logos i {
   padding: 0.5rem;
 }
 .carousel-card .slide-carousel img {
-  width: 20%;
   height: 50px;
 }
 @media (min-width: 500px) {
@@ -585,20 +581,13 @@ html,
 body {
   font-display: fallback;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 @media (min-width: 500px) {
   html,
   body {
     margin-top: 3rem;
   }
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: 'Montserrat', sans-serif;
 }
 h1 {
   font-size: 3rem;
@@ -633,6 +622,7 @@ p {
 }
 @media (min-width: 500px) {
   p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2;
   }
 }

@@ -8,9 +8,6 @@ class NavBar {
     show () {
        const linkNav= this.navElement.querySelector('.links');
        linkNav.classList.toggle('show-link');
-        // linkNav.classList.contains('show-link') 
-        // ? TweenMax.to(linkNav, 2, {x:10, display:'flex'}) 
-        // : TweenMax.to(linkNav,2 , {x:0, display:'none'})
     }
 
     
