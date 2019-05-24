@@ -60,14 +60,13 @@ class Carousel {
         clearInterval(this.showInterval.bind(this))
         e.classList.contains('right-slide') ? TweenMax.from(this.carouselDiv, 1, {x:-100, ease: Power1.easeOut})
         : TweenMax.from(this.carouselDiv, 1, {x:100, ease: Power1.easeOut})
-        // TweenMax.from(this.carouselDiv, .5, {scale:1.02,opacity: 0.7})
     }
 
     showInterval () {
         setInterval(()=>{
             this.show();
             TweenMax.from(this.carouselDiv, 1, {scale:1.3,opacity: 0.7})
-        }, 5000)
+        }, 10000)
     }
 }
 
