@@ -66,7 +66,7 @@ class Carousel {
         setInterval(()=>{
             this.show();
             TweenMax.from(this.carouselDiv, 1, {scale:1.3,opacity: 0.7})
-        }, 5000)
+        }, 10000)
     }
 }
 
